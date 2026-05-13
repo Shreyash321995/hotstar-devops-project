@@ -1,0 +1,39 @@
+<h1>Hotstar Clone</h1>
+
+<form method="GET" action="/" style="text-align:center; margin-bottom:30px;">
+
+    <input
+        type="text"
+        name="query"
+        placeholder="Search Movies..."
+        style="padding:12px; width:300px; border-radius:8px; border:none;">
+
+    <button
+        type="submit"
+        style="padding:12px 20px; border:none; border-radius:8px; cursor:pointer;">
+
+        Search
+
+    </button>
+
+</form>
+
+<div class="movies">
+
+    {% for movie in movies %}
+
+    <div class="movie-card">
+
+        <a href="{{ movie.trailer }}" target="_blank">
+
+            <img src="{{ movie.poster }}" alt="{{ movie.title }}">
+
+        </a>
+
+        <h3>{{ movie.title }}</h3>
+
+    </div>
+
+    {% endfor %}
+
+</div>
