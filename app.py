@@ -1,9 +1,10 @@
 from flask import Flask, render_template, request
 import requests
+import  os 
 
 app = Flask(__name__)
 
-API_KEY = "a9e0293e8cb50db4d70f9e8f03e2aa4c"
+API_KEY = os.getenv("TMDB_API_KEY")
 
 @app.route('/')
 def home():
